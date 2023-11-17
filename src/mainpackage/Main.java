@@ -33,8 +33,7 @@ public class Main {
         SPHERE,
         TRUNCATED_SPHERE,
         CYLINDER,
-        CONE,
-        DEFAULT
+        CONE
     }
 
     public static void main(String[] args) {
