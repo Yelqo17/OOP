@@ -1,4 +1,4 @@
-package shapes;
+package com.github.yelqo17.shapes;
 
 import java.util.List;
 
@@ -6,6 +6,8 @@ public class Square extends Figure {
     static final int MAX_SIZE = 4;
     static final int DEGREE_BY_FORMULA = 2;
     static final int CONST_BY_FORMULA = 4;
+    private static final int A = 0;
+    private static final int B = 1;
     public Square(List<Point> points) {
         super(points);
     }
@@ -40,17 +42,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public void calculateArea() {
-        double sideLength = calculateDistance(points.get(0), points.get(1));
-        double area = Math.pow(sideLength, DEGREE_BY_FORMULA);
-        printArea(area);
+    public double calculateArea() {
+        double sideLength = calculateDistance(points.get(A), points.get(B));
+        return Math.pow(sideLength, DEGREE_BY_FORMULA);
     }
 
     @Override
-    public void calculatePerimeter() {
-        double sideLength = calculateDistance(points.get(0), points.get(1));
-        double perimeter = CONST_BY_FORMULA * sideLength;
-        printPerimeter(perimeter);
+    public double calculatePerimeter() {
+        double sideLength = calculateDistance(points.get(A), points.get(B));
+        return CONST_BY_FORMULA * sideLength;
     }
 
     private boolean areAllAngles90Degrees() {
@@ -59,10 +59,10 @@ public class Square extends Figure {
             Point p2 = points.get((i + 1) % MAX_SIZE);
             Point p3 = points.get((i + 2) % MAX_SIZE);
 
-            int dx1 = p2.x - p1.x;
-            int dy1 = p2.y - p1.y;
-            int dx2 = p3.x - p2.x;
-            int dy2 = p3.y - p2.y;
+            int dx1 = p2.getX() - p1.getX();
+            int dy1 = p2.getY() - p1.getY();
+            int dx2 = p3.getX() - p2.getX();
+            int dy2 = p3.getY() - p2.getY();
 
             if (dx1 * dx2 + dy1 * dy2 != 0) {
                 return false;

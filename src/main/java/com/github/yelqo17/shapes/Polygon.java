@@ -1,4 +1,4 @@
-package shapes;
+package com.github.yelqo17.shapes;
 
 import java.util.List;
 
@@ -26,8 +26,8 @@ public class Polygon extends Figure {
     }
 
     @Override
-    public void calculateArea() {
-        double area = 0;
+    public double calculateArea() {
+        double area;
 
         if (is3DPolygon()) {
             area = calculate3DArea();
@@ -35,12 +35,12 @@ public class Polygon extends Figure {
             area = calculate2DArea();
         }
 
-        printArea(area);
+        return area;
     }
 
     @Override
-    public void calculatePerimeter() {
-        double perimeter = 0;
+    public double calculatePerimeter() {
+        double perimeter;
 
         if (is3DPolygon()) {
             perimeter = calculate3DPerimeter();
@@ -48,7 +48,7 @@ public class Polygon extends Figure {
             perimeter = calculate2DPerimeter();
         }
 
-        printPerimeter(perimeter);
+        return perimeter;
     }
 
     private boolean arePointsCollinear() {
@@ -59,7 +59,8 @@ public class Polygon extends Figure {
             Point p2 = points.get((i + 1) % n);
             Point p3 = points.get((i + 2) % n);
 
-            int crossProduct = (p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x);
+            int crossProduct = (p2.getX() - p1.getX()) * (p3.getY() - p1.getY())
+                    - (p2.getY() - p1.getY()) * (p3.getX() - p1.getX());
 
             if (crossProduct != 0) {
                 return false;
@@ -71,7 +72,7 @@ public class Polygon extends Figure {
 
     private boolean is3DPolygon() {
         for (Point point : points) {
-            if (point.z != 0) {
+            if (point.getZ() != 0) {
                 return true;
             }
         }
@@ -100,9 +101,9 @@ public class Polygon extends Figure {
         int zSum = 0;
 
         for (Point point : points) {
-            xSum += point.x;
-            ySum += point.y;
-            zSum += point.z;
+            xSum += point.getX();
+            ySum += point.getY();
+            zSum += point.getZ();
         }
 
         int xCentroid = xSum / n;
@@ -113,8 +114,8 @@ public class Polygon extends Figure {
     }
 
     private double calculateTriangleArea(Point p1, Point p2, Point p3) {
-        double[] vector1 = {p2.x - p1.x, p2.y - p1.y, p2.z - p1.z};
-        double[] vector2 = {p3.x - p1.x, p3.y - p1.y, p3.z - p1.z};
+        double[] vector1 = {p2.getX() - p1.getX(), p2.getY() - p1.getY(), p2.getZ() - p1.getZ()};
+        double[] vector2 = {p3.getX() - p1.getX(), p3.getY() - p1.getY(), p3.getZ() - p1.getZ()};
 
         double vx = vector1[1] * vector2[2] - vector1[2] * vector2[1];
         double vy = vector1[2] * vector2[0] - vector1[0] * vector2[2];
@@ -132,7 +133,7 @@ public class Polygon extends Figure {
         for (int i = 0; i < n; i++) {
             Point p1 = points.get(i);
             Point p2 = points.get((i + 1) % n);
-            area += (p1.x * p2.y - p1.y * p2.x);
+            area += (p1.getX() * p2.getY() - p1.getY() * p2.getX());
         }
 
         area = Math.abs(area) / DIVIDER;

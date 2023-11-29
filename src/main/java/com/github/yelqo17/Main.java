@@ -1,17 +1,17 @@
-package mainpackage;
+package com.github.yelqo17;
 
-import shapes.Circle;
-import shapes.Cone;
-import shapes.Cylinder;
-import shapes.Parallelogram;
-import shapes.Polygon;
-import shapes.Rectangle;
-import shapes.Sphere;
-import shapes.Square;
-import shapes.Triangle;
-import shapes.TruncatedSphere;
-import shapes.Point;
-import shapes.Figure;
+import com.github.yelqo17.shapes.Circle;
+import com.github.yelqo17.shapes.Cone;
+import com.github.yelqo17.shapes.Cylinder;
+import com.github.yelqo17.shapes.Parallelogram;
+import com.github.yelqo17.shapes.Polygon;
+import com.github.yelqo17.shapes.Rectangle;
+import com.github.yelqo17.shapes.Sphere;
+import com.github.yelqo17.shapes.Square;
+import com.github.yelqo17.shapes.Triangle;
+import com.github.yelqo17.shapes.TruncatedSphere;
+import com.github.yelqo17.shapes.Point;
+import com.github.yelqo17.shapes.Figure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,7 @@ public class Main {
     static final int Y_INDEX = 1;
     static final int Z_INDEX = 2;
     private enum FigureType {
+        FIGURE,
         CIRCLE,
         SQUARE,
         RECTANGLE,
@@ -74,8 +75,8 @@ public class Main {
             Figure figure = createFigure(command, points);
 
             if (figure.validate()) {
-                figure.calculateArea();
-                figure.calculatePerimeter();
+                figure.printArea();
+                figure.printPerimeter();
             }
             points.clear();
         }
