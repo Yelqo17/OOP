@@ -3,11 +3,11 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Rectangle extends Figure {
-    static final int MAX_SIZE = 4;
-    static final int DEGREE_BY_FORMULA = 2;
-    static final int A = 0;
-    static final int B = 1;
-    static final int C = 2;
+    private static final int MAX_SIZE = 4;
+    private static final int DEGREE_BY_FORMULA = 2;
+    private static final int A = 0;
+    private static final int B = 1;
+    private static final int C = 2;
     public Rectangle(List<Point> points) {
         super(points);
     }

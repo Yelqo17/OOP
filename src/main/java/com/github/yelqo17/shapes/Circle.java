@@ -5,8 +5,8 @@ import java.util.List;
 public class Circle extends Figure {
     private static final int MAX_SIZE = 2;
     private static final int DEGREE_BY_FORMULA = 2;
-    static final int A = 0;
-    static final int B = 1;
+    private static final int A = 0;
+    private static final int B = 1;
 
     public Circle(List<Point> points) {
         super(points);

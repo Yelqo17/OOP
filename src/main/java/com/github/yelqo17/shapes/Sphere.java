@@ -3,9 +3,9 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Sphere extends Figure {
-    static final int MAX_SIZE = 2;
-    static final int DEGREE_BY_FORMULA = 2;
-    static final int CONST_BY_FORMULA = 4;
+    private static final int MAX_SIZE = 2;
+    private static final int DEGREE_BY_FORMULA = 2;
+    private static final int CONST_BY_FORMULA = 4;
     private static final int A = 0;
     private static final int B = 1;
     public Sphere(List<Point> points) {

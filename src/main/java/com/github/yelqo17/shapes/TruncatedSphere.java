@@ -3,7 +3,7 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class TruncatedSphere extends Figure {
-    static final int MAX_SIZE = 3;
+    private static final int MAX_SIZE = 3;
     private static final int A = 0;
     private static final int B = 1;
     private static final int C = 2;

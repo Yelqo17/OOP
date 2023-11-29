@@ -3,8 +3,8 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Cylinder extends Figure {
-    static final int MAX_SIZE = 3;
-    static final int DEGREE_BY_FORMULA = 2;
+    private static final int MAX_SIZE = 3;
+    private static final int DEGREE_BY_FORMULA = 2;
     private static final int A = 0;
     private static final int B = 1;
     private static final int C = 2;
