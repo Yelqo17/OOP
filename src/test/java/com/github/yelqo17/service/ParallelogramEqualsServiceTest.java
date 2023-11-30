@@ -39,7 +39,7 @@ public class ParallelogramEqualsServiceTest {
         D = points.get(3);
 
         testEqualsArea(A, B, C, D, 9);
-        testEqualsPerimeter(A, B, C, D, 12.31);
+        testEqualsPerimeter(A, B, C, D, 12.32);
     }
 
     private static void testEqualsArea(Point A, Point B, Point C, Point D, double expected) {

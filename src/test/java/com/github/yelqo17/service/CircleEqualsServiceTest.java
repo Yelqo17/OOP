@@ -16,7 +16,7 @@ public class CircleEqualsServiceTest {
         Point A = points.get(0);
         Point B = points.get(1);
 
-        testEqualsArea(A, B,3.13);
+        testEqualsArea(A, B,3.14);
         testEqualsPerimeter(A, B, 6.28);
 
         points.clear();
