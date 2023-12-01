@@ -13,8 +13,8 @@ public class ParallelogramEqualsShapesTest {
     private static Parallelogram parallelogram;
 
     @Test
-    @DisplayName("when parallelogram validation equals to expected then return true")
-    public void whenParallelogramValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check parallelogram validation")
+    public void checkParallelogramValidation() {
 
         addPointsForValidTest();
         boolean isValid = parallelogram.validate();
@@ -28,8 +28,8 @@ public class ParallelogramEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when parallelogram area equals to expected then return true")
-    public void whenParallelogramAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check parallelogram area equality")
+    public void checkParallelogramAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = parallelogram.calculateArea();
@@ -43,8 +43,8 @@ public class ParallelogramEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when parallelogram perimeter equals to expected then return true")
-    public void whenParallelogramPerimeterEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check parallelogram perimeter equality")
+    public void checkParallelogramPerimeterEquality() {
 
         addPointsForValidTest();
         double actualPerimeter = parallelogram.calculatePerimeter();

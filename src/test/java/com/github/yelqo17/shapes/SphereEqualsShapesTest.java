@@ -13,8 +13,8 @@ public class SphereEqualsShapesTest {
     private static final Sphere sphere = new Sphere(points);
 
     @Test
-    @DisplayName("when sphere validation equals to expected then return true")
-    public void whenSphereValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check sphere validation")
+    public void checkSphereValidation() {
 
         addPointsForValidTest();
         boolean isValid = sphere.validate();
@@ -28,8 +28,8 @@ public class SphereEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when sphere area equals to expected then return true")
-    public void whenSphereAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check sphere area equality")
+    public void checkSphereAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = sphere.calculateArea();

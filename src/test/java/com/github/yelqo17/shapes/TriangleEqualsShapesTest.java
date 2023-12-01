@@ -13,8 +13,8 @@ public class TriangleEqualsShapesTest {
     private static final Triangle triangle = new Triangle(points);
 
     @Test
-    @DisplayName("when triangle validation equals to expected then return true")
-    public void whenTriangleValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check triangle validation")
+    public void checkTriangleValidation() {
 
         addPointsForValidTest();
         boolean isValid = triangle.validate();
@@ -28,8 +28,8 @@ public class TriangleEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when triangle area equals to expected then return true")
-    public void whenTriangleAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check triangle area equality")
+    public void checkTriangleAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = triangle.calculateArea();
@@ -43,8 +43,8 @@ public class TriangleEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when triangle perimeter equals to expected then return true")
-    public void whenTrianglePerimeterEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check triangle perimeter equality")
+    public void checkTrianglePerimeterEquality() {
 
         addPointsForValidTest();
         double actualPerimeter = triangle.calculatePerimeter();

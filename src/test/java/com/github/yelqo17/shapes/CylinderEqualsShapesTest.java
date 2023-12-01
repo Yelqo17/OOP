@@ -13,8 +13,8 @@ public class CylinderEqualsShapesTest {
     private static final Cylinder cylinder = new Cylinder(points);
 
     @Test
-    @DisplayName("when cylinder validation equals to expected then return true")
-    public void whenCylinderValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check cylinder validation")
+    public void checkCylinderValidation() {
 
         addPointsForValidTest();
         boolean isValid = cylinder.validate();
@@ -28,8 +28,8 @@ public class CylinderEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when cylinder area equals to expected then return true")
-    public void whenCylinderAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check cylinder area equality")
+    public void checkCylinderAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = cylinder.calculateArea();

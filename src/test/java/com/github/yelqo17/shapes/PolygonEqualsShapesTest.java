@@ -13,8 +13,8 @@ public class PolygonEqualsShapesTest {
     private static final Polygon polygon = new Polygon(points);
 
     @Test
-    @DisplayName("when polygon validation equals to expected then return true")
-    public void whenPolygonValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check polygon validation")
+    public void checkPolygonValidation() {
 
         addPointsForValidTest();
         boolean isValid = polygon.validate();
@@ -28,8 +28,8 @@ public class PolygonEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when polygon area equals to expected then return true")
-    public void whenPolygonAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check polygon area equality")
+    public void checkPolygonAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = polygon.calculateArea();
@@ -43,8 +43,8 @@ public class PolygonEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when polygon perimeter equals to expected then return true")
-    public void whenPolygonPerimeterEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check polygon perimeter equality")
+    public void checkPolygonPerimeterEquality() {
 
         addPointsForValidTest();
         double actualPerimeter = polygon.calculatePerimeter();

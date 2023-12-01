@@ -13,8 +13,8 @@ public class SquareEqualsShapesTest {
     private static final Square square = new Square(points);
 
     @Test
-    @DisplayName("when square validation equals to expected then return true")
-    public void whenSquareValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check square validation")
+    public void checkSquareValidation() {
 
         addPointsForValidTest();
         boolean isValid = square.validate();
@@ -28,8 +28,8 @@ public class SquareEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when square area equals to expected then return true")
-    public void whenSquareAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check square area equality")
+    public void checkSquareAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = square.calculateArea();
@@ -43,8 +43,8 @@ public class SquareEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when square perimeter equals to expected then return true")
-    public void whenSquarePerimeterEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check square perimeter equality")
+    public void checkSquarePerimeterEquality() {
 
         addPointsForValidTest();
         double actualPerimeter = square.calculatePerimeter();

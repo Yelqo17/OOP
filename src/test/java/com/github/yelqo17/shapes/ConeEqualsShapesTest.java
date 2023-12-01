@@ -13,8 +13,8 @@ public class ConeEqualsShapesTest {
     private static final Cone cone = new Cone(points);
 
     @Test
-    @DisplayName("when cone validation equals to expected then return true")
-    public void whenConeValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check cone validation")
+    public void checkConeValidation() {
 
         addPointsForValidTest();
         boolean isValid = cone.validate();
@@ -28,8 +28,8 @@ public class ConeEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when cone area equals to expected then return true")
-    public void whenConeAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check cone area equality")
+    public void checkConeAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = cone.calculateArea();

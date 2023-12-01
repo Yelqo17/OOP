@@ -29,10 +29,6 @@ public class Figure {
         System.out.println("The figure perimeter " + perimeter);
     }
 
-    public double round(double number) {
-        return Math.round(number * 100.0) / 100.0;
-    }
-
     protected double calculateArea() {
         System.out.println("The figure has no area");
         return 0;
@@ -41,6 +37,10 @@ public class Figure {
     protected double calculatePerimeter() {
         System.out.println("The figure has no perimeter");
         return 0;
+    }
+
+    protected double round(double number) {
+        return Math.round(number * 100.0) / 100.0;
     }
 
     protected void printValid() {

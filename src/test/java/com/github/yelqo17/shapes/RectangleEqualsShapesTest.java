@@ -13,8 +13,8 @@ public class RectangleEqualsShapesTest {
     private static final Rectangle rectangle = new Rectangle(points);
 
     @Test
-    @DisplayName("when rectangle validation equals to expected then return true")
-    public void whenRectangleValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check rectangle validation")
+    public void checkRectangleValidation() {
 
         addPointsForValidTest();
         boolean isValid = rectangle.validate();
@@ -28,8 +28,8 @@ public class RectangleEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when rectangle area equals to expected then return true")
-    public void whenRectangleAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check rectangle area equality")
+    public void checkRectangleAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = rectangle.calculateArea();
@@ -43,8 +43,8 @@ public class RectangleEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when rectangle perimeter equals to expected then return true")
-    public void whenRectanglePerimeterEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check rectangle perimeter equality")
+    public void checkRectanglePerimeterEquality() {
 
         addPointsForValidTest();
         double actualPerimeter = rectangle.calculatePerimeter();

@@ -8,13 +8,13 @@ import static org.assertj.core.api.BDDAssertions.then;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CircleEqualsServiceTest {
+public class CircleEqualsShapesTest {
     private static final List<Point> points = new ArrayList<>();
     private static final Circle circle = new Circle(points);
 
     @Test
-    @DisplayName("when circle validation equals to expected then return true")
-    public void whenCircleValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check circle validation")
+    public void checkCircleValidation() {
 
         addPointsForValidTest();
         boolean isValid = circle.validate();
@@ -28,8 +28,8 @@ public class CircleEqualsServiceTest {
     }
 
     @Test
-    @DisplayName("when circle area equals to expected then return true")
-    public void whenCircleAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check circle area equality")
+    public void checkCircleAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = circle.calculateArea();
@@ -43,8 +43,8 @@ public class CircleEqualsServiceTest {
     }
 
     @Test
-    @DisplayName("when circle perimeter equals to expected then return true")
-    public void whenCirclePerimeterEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check circle perimeter equality")
+    public void checkCirclePerimeterEquality() {
 
         addPointsForValidTest();
         double actualPerimeter = circle.calculatePerimeter();

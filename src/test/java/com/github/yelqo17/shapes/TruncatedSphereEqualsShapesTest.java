@@ -13,8 +13,8 @@ public class TruncatedSphereEqualsShapesTest {
     private static final TruncatedSphere truncatedSphere = new TruncatedSphere(points);
 
     @Test
-    @DisplayName("when truncatedSphere validation equals to expected then return true")
-    public void whenTruncatedSphereValidationEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check truncated sphere validation")
+    public void checkTruncatedSphereValidation() {
 
         addPointsForValidTest();
         boolean isValid = truncatedSphere.validate();
@@ -28,8 +28,8 @@ public class TruncatedSphereEqualsShapesTest {
     }
 
     @Test
-    @DisplayName("when truncatedSphere area equals to expected then return true")
-    public void whenTruncatedSphereAreaEqualsToExpectedThenReturnTrue() {
+    @DisplayName("check truncated sphere area equality")
+    public void checkTruncatedSphereAreaEquality() {
 
         addPointsForValidTest();
         double actualArea = truncatedSphere.calculateArea();
