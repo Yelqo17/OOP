@@ -45,7 +45,7 @@ public class Parallelogram extends Figure {
         double product = AB * AD;
         double cos = calculateCos(vectors.get(A), vectors.get(B), product);
         double sin = calculateSin(cos);
-        return product * sin;
+        return round(product * sin);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Parallelogram extends Figure {
             distances[i] = calculateDistance(points.get(i), points.get((i + 1) % MAX_SIZE));
         }
 
-        return DEGREE_BY_FORMULA * (distances[A] + distances[B]);
+        return round(DEGREE_BY_FORMULA * (distances[A] + distances[B]));
     }
 
     private void createVector(Point p1, Point p2) {

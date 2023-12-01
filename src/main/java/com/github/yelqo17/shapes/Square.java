@@ -44,13 +44,13 @@ public class Square extends Figure {
     @Override
     public double calculateArea() {
         double sideLength = calculateDistance(points.get(A), points.get(B));
-        return Math.pow(sideLength, DEGREE_BY_FORMULA);
+        return round(Math.pow(sideLength, DEGREE_BY_FORMULA));
     }
 
     @Override
     public double calculatePerimeter() {
         double sideLength = calculateDistance(points.get(A), points.get(B));
-        return CONST_BY_FORMULA * sideLength;
+        return round(CONST_BY_FORMULA * sideLength);
     }
 
     private boolean areAllAngles90Degrees() {

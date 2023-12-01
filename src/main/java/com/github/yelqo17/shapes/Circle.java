@@ -18,7 +18,7 @@ public class Circle extends Figure {
             Point p1 = points.get(A);
             Point p2 = points.get(B);
 
-            if (p1.getX() == p2.getX() && p1.getY() == p2.getY() && p1.getZ() == p2.getZ()) {
+            if (p1.getX() == p2.getX() && p1.getY() == p2.getY()) {
                 printInvalid();
                 return false;
             }
@@ -34,12 +34,12 @@ public class Circle extends Figure {
     @Override
     public double calculateArea() {
         double radius = calculateDistance(points.get(A), points.get(B));
-        return Math.PI * Math.pow(radius, DEGREE_BY_FORMULA);
+        return round(Math.PI * Math.pow(radius, DEGREE_BY_FORMULA));
     }
 
     @Override
     public double calculatePerimeter() {
         double radius = calculateDistance(points.get(A), points.get(B));
-        return DEGREE_BY_FORMULA * Math.PI * radius;
+        return round(DEGREE_BY_FORMULA * Math.PI * radius);
     }
 }

@@ -41,6 +41,6 @@ public class TruncatedSphere extends Figure {
     public double calculateArea() {
         double radius = calculateDistance(points.get(A), points.get(B));
         double h = calculateDistance(points.get(A), points.get(C));
-        return 2 * Math.PI * radius * h + Math.PI * h * (2 * radius - h);
+        return round(2 * Math.PI * radius * h + Math.PI * h * (2 * radius - h));
     }
 }

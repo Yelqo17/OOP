@@ -35,7 +35,7 @@ public class Polygon extends Figure {
             area = calculate2DArea();
         }
 
-        return area;
+        return round(area);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Polygon extends Figure {
             perimeter = calculate2DPerimeter();
         }
 
-        return perimeter;
+        return round(perimeter);
     }
 
     private boolean arePointsCollinear() {

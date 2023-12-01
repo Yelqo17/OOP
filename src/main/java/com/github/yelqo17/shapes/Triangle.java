@@ -43,13 +43,12 @@ public class Triangle extends Figure {
         Point p1 = points.get(A);
         Point p2 = points.get(B);
         Point p3 = points.get(C);
-        return Math.abs(
-                (p1.getX() * (p2.getY() - p3.getY())
-                + p2.getX() * (p3.getY() - p1.getY())
-                + p3.getX() * (p1.getY() - p2.getY())
-                )
-                / DIVIDER
-        );
+        return round(
+                Math.abs((p1.getX() * (p2.getY() - p3.getY())
+                        + p2.getX() * (p3.getY() - p1.getY())
+                        + p3.getX() * (p1.getY() - p2.getY())
+                ) / DIVIDER
+        ));
     }
 
     @Override
@@ -57,6 +56,6 @@ public class Triangle extends Figure {
         double side1 = calculateDistance(points.get(A), points.get(B));
         double side2 = calculateDistance(points.get(B), points.get(C));
         double side3 = calculateDistance(points.get(C), points.get(A));
-        return side1 + side2 + side3;
+        return round(side1 + side2 + side3);
     }
 }

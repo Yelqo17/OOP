@@ -18,7 +18,7 @@ public class Sphere extends Figure {
             Point p1 = points.get(A);
             Point p2 = points.get(B);
 
-            if (p1.equals(p2)) {
+            if (p1.getX() == p2.getX() && p1.getY() == p2.getY() && p1.getZ() == p2.getZ()) {
                 printInvalid();
                 return false;
             }
@@ -34,6 +34,6 @@ public class Sphere extends Figure {
     @Override
     public double calculateArea() {
         double radius = calculateDistance(points.get(A), points.get(B));
-        return CONST_BY_FORMULA * Math.PI * Math.pow(radius, DEGREE_BY_FORMULA);
+        return round(CONST_BY_FORMULA * Math.PI * Math.pow(radius, DEGREE_BY_FORMULA));
     }
 }

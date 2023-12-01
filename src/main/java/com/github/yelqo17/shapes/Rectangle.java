@@ -45,7 +45,7 @@ public class Rectangle extends Figure {
     public double calculateArea() {
         double length = calculateDistance(points.get(A), points.get(B));
         double width = calculateDistance(points.get(B), points.get(C));
-        return length * width;
+        return round(length * width);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Rectangle extends Figure {
             distances[i] = calculateDistance(points.get(i), points.get((i + 1) % MAX_SIZE));
         }
 
-        return DEGREE_BY_FORMULA * (distances[A] + distances[B]);
+        return round(DEGREE_BY_FORMULA * (distances[A] + distances[B]));
     }
 
     private boolean areAllAngles90Degrees() {

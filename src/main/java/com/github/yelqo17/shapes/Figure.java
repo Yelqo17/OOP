@@ -18,7 +18,7 @@ public class Figure {
         if (area == 0) {
             return;
         }
-        System.out.printf("The figure area %.2f%n", area);
+        System.out.println("The figure area " + area);
     }
 
     public void printPerimeter() {
@@ -26,7 +26,11 @@ public class Figure {
         if (perimeter == 0) {
             return;
         }
-        System.out.printf("The figure perimeter %.2f%n", perimeter);
+        System.out.println("The figure perimeter " + perimeter);
+    }
+
+    public double round(double number) {
+        return Math.round(number * 100.0) / 100.0;
     }
 
     protected double calculateArea() {

@@ -49,10 +49,8 @@ public class Cylinder extends Figure {
     public double calculateArea() {
         double radius = calculateDistance(points.get(A), points.get(C));
         double height = calculateDistance(points.get(A), points.get(B));
-
         double baseArea = DEGREE_BY_FORMULA * Math.PI * Math.pow(radius, DEGREE_BY_FORMULA);
         double lateralSurfaceArea = 2 * Math.PI * radius * height;
-
-        return baseArea + lateralSurfaceArea;
+        return round(baseArea + lateralSurfaceArea);
     }
 }

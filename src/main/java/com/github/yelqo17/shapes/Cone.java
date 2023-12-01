@@ -44,6 +44,6 @@ public class Cone extends Figure {
         double slantHeight = calculateDistance(points.get(A), points.get(C));
         double lateralSurfaceArea = Math.PI * radius * (radius + slantHeight);
         double baseArea = Math.PI * Math.pow(radius, DEGREE_BY_FORMULA);
-        return lateralSurfaceArea + baseArea;
+        return round(lateralSurfaceArea + baseArea);
     }
 }
