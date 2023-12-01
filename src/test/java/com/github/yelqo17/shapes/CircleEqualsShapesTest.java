@@ -9,6 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CircleEqualsShapesTest {
+    private static final int FIRST_VALID_COORDINATE_X = 0;
+    private static final int SECOND_VALID_COORDINATE_X = 0;
+    private static final int FIRST_VALID_COORDINATE_Y = 0;
+    private static final int SECOND_VALID_COORDINATE_Y = 1;
+    private static final int FIRST_INVALID_COORDINATE_X = 2;
+    private static final int SECOND_INVALID_COORDINATE_X = 2;
+    private static final int FIRST_INVALID_COORDINATE_Y = 0;
+    private static final int SECOND_INVALID_COORDINATE_Y = 0;
+    private static final double VALID_AREA = 3.14;
+    private static final double INVALID_AREA = 0;
+    private static final double VALID_PERIMETER = 6.28;
+    private static final double INVALID_PERIMETER = 0;
+
     private static final List<Point> points = new ArrayList<>();
     private static final Circle circle = new Circle(points);
 
@@ -34,12 +47,12 @@ public class CircleEqualsShapesTest {
         addPointsForValidTest();
         double actualArea = circle.calculateArea();
 
-        then(actualArea).isEqualTo(3.14);
+        then(actualArea).isEqualTo(VALID_AREA);
 
         addPointsForInvalidTest();
         actualArea = circle.calculateArea();
 
-        then(actualArea).isEqualTo(0);
+        then(actualArea).isEqualTo(INVALID_AREA);
     }
 
     @Test
@@ -49,23 +62,23 @@ public class CircleEqualsShapesTest {
         addPointsForValidTest();
         double actualPerimeter = circle.calculatePerimeter();
 
-        then(actualPerimeter).isEqualTo(6.28);
+        then(actualPerimeter).isEqualTo(VALID_PERIMETER);
 
         addPointsForInvalidTest();
         actualPerimeter = circle.calculatePerimeter();
 
-        then(actualPerimeter).isEqualTo(0);
+        then(actualPerimeter).isEqualTo(INVALID_PERIMETER);
     }
 
     private void addPointsForValidTest() {
         points.clear();
-        points.add(new Point(0, 0));
-        points.add(new Point(0, 1));
+        points.add(new Point(FIRST_VALID_COORDINATE_X, FIRST_VALID_COORDINATE_Y));
+        points.add(new Point(SECOND_VALID_COORDINATE_X, SECOND_VALID_COORDINATE_Y));
     }
 
     private void addPointsForInvalidTest() {
         points.clear();
-        points.add(new Point(2, 0));
-        points.add(new Point(2, 0));
+        points.add(new Point(FIRST_INVALID_COORDINATE_X, FIRST_INVALID_COORDINATE_Y));
+        points.add(new Point(SECOND_INVALID_COORDINATE_X, SECOND_INVALID_COORDINATE_Y));
     }
 }

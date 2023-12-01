@@ -9,6 +9,23 @@ import java.util.List;
 import static org.assertj.core.api.BDDAssertions.then;
 
 public class TriangleEqualsShapesTest {
+    private static final int FIRST_VALID_COORDINATE_X = 1;
+    private static final int SECOND_VALID_COORDINATE_X = 9;
+    private static final int THIRD_VALID_COORDINATE_X = 7;
+    private static final int FIRST_VALID_COORDINATE_Y = 6;
+    private static final int SECOND_VALID_COORDINATE_Y = 6;
+    private static final int THIRD_VALID_COORDINATE_Y = 9;
+    private static final int FIRST_INVALID_COORDINATE_X = 0;
+    private static final int SECOND_INVALID_COORDINATE_X = 1;
+    private static final int THIRD_INVALID_COORDINATE_X = 3;
+    private static final int FIRST_INVALID_COORDINATE_Y = 0;
+    private static final int SECOND_INVALID_COORDINATE_Y = 0;
+    private static final int THIRD_INVALID_COORDINATE_Y = 0;
+    private static final double VALID_AREA = 12;
+    private static final double INVALID_AREA = 0;
+    private static final double VALID_PERIMETER = 18.31;
+    private static final double INVALID_PERIMETER = 6;
+
     private static final List<Point> points = new ArrayList<>();
     private static final Triangle triangle = new Triangle(points);
 
@@ -34,12 +51,12 @@ public class TriangleEqualsShapesTest {
         addPointsForValidTest();
         double actualArea = triangle.calculateArea();
 
-        then(actualArea).isEqualTo(12);
+        then(actualArea).isEqualTo(VALID_AREA);
 
         addPointsForInvalidTest();
         actualArea = triangle.calculateArea();
 
-        then(actualArea).isEqualTo(0);
+        then(actualArea).isEqualTo(INVALID_AREA);
     }
 
     @Test
@@ -49,26 +66,26 @@ public class TriangleEqualsShapesTest {
         addPointsForValidTest();
         double actualPerimeter = triangle.calculatePerimeter();
 
-        then(actualPerimeter).isEqualTo(18.31);
+        then(actualPerimeter).isEqualTo(VALID_PERIMETER);
 
         addPointsForInvalidTest();
         actualPerimeter = triangle.calculatePerimeter();
 
-        then(actualPerimeter).isEqualTo(6);
+        then(actualPerimeter).isEqualTo(INVALID_PERIMETER);
     }
 
     private void addPointsForValidTest() {
         points.clear();
-        points.add(new Point(1, 6));
-        points.add(new Point(9, 6));
-        points.add(new Point(7, 9));
+        points.add(new Point(FIRST_VALID_COORDINATE_X, FIRST_VALID_COORDINATE_Y));
+        points.add(new Point(SECOND_VALID_COORDINATE_X, SECOND_VALID_COORDINATE_Y));
+        points.add(new Point(THIRD_VALID_COORDINATE_X, THIRD_VALID_COORDINATE_Y));
 
     }
 
     private void addPointsForInvalidTest() {
         points.clear();
-        points.add(new Point(0, 0));
-        points.add(new Point(1, 0));
-        points.add(new Point(3, 0));
+        points.add(new Point(FIRST_INVALID_COORDINATE_X, FIRST_INVALID_COORDINATE_Y));
+        points.add(new Point(SECOND_INVALID_COORDINATE_X, SECOND_INVALID_COORDINATE_Y));
+        points.add(new Point(THIRD_INVALID_COORDINATE_X, THIRD_INVALID_COORDINATE_Y));
     }
 }

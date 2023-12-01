@@ -3,6 +3,7 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Figure {
+    private static final double precision = 100.0;
     protected List<Point> points;
     public Figure(List<Point> points) {
         this.points = points;
@@ -40,7 +41,7 @@ public class Figure {
     }
 
     protected double round(double number) {
-        return Math.round(number * 100.0) / 100.0;
+        return Math.round(number * precision) / precision;
     }
 
     protected void printValid() {
