@@ -3,8 +3,11 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Polygon extends Figure {
+
     private static final int MIN_SIZE = 3;
+
     private static final double DIVIDER = 2.0;
+
     public Polygon(List<Point> points) {
         super(points);
     }

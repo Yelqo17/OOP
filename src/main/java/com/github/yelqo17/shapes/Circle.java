@@ -3,8 +3,11 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Circle extends Figure {
+
     private static final int MAX_SIZE = 2;
+
     private static final int DEGREE_BY_FORMULA = 2;
+
     private static final int A = 0;
     private static final int B = 1;
 

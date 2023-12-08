@@ -3,11 +3,15 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Triangle extends Figure {
+
     private static final int MAX_SIZE = 3;
+
     private static final double DIVIDER = 2.0;
+
     private static final int A = 0;
     private static final int B = 1;
     private static final int C = 2;
+
     public Triangle(List<Point> points) {
         super(points);
     }
@@ -53,9 +57,9 @@ public class Triangle extends Figure {
 
     @Override
     public double calculatePerimeter() {
-        double side1 = calculateDistance(points.get(A), points.get(B));
-        double side2 = calculateDistance(points.get(B), points.get(C));
-        double side3 = calculateDistance(points.get(C), points.get(A));
-        return round(side1 + side2 + side3);
+        double AB = calculateDistance(points.get(A), points.get(B));
+        double BC = calculateDistance(points.get(B), points.get(C));
+        double CA = calculateDistance(points.get(C), points.get(A));
+        return round(AB + BC + CA);
     }
 }

@@ -3,17 +3,22 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Cone extends Figure {
+
     private static final int MAX_SIZE = 3;
+
     private static final int DEGREE_BY_FORMULA = 2;
+
     private static final int A = 0;
     private static final int B = 1;
     private static final int C = 2;
+
     public Cone(List<Point> points) {
         super(points);
     }
 
     @Override
     public boolean validate() {
+
         if (points.size() == MAX_SIZE) {
             Point p1 = points.get(A);
             Point p2 = points.get(B);
@@ -42,7 +47,8 @@ public class Cone extends Figure {
     public double calculateArea() {
         double radius = calculateDistance(points.get(A), points.get(B));
         double slantHeight = calculateDistance(points.get(A), points.get(C));
-        double lateralSurfaceArea = Math.PI * radius * (radius + slantHeight);
+        double l = Math.sqrt(radius * radius + slantHeight * slantHeight);
+        double lateralSurfaceArea = Math.PI * radius * (radius + l);
         double baseArea = Math.PI * Math.pow(radius, DEGREE_BY_FORMULA);
         return round(lateralSurfaceArea + baseArea);
     }

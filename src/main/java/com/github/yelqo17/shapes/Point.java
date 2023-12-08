@@ -1,6 +1,7 @@
 package com.github.yelqo17.shapes;
 
 public class Point {
+
     private final int x;
     private final int y;
     private final int z;

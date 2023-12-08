@@ -3,8 +3,11 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Figure {
+
     private static final double precision = 100.0;
+
     protected List<Point> points;
+
     public Figure(List<Point> points) {
         this.points = points;
     }
@@ -58,5 +61,4 @@ public class Figure {
         int deltaZ = p2.getZ() - p1.getZ();
         return Math.sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
     }
-
 }

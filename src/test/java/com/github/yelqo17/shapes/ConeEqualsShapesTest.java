@@ -27,8 +27,8 @@ public class ConeEqualsShapesTest {
     private static final int FIRST_INVALID_COORDINATE_Z = 0;
     private static final int SECOND_INVALID_COORDINATE_Z = 0;
     private static final int THIRD_INVALID_COORDINATE_Z = 0;
-    private static final double VALID_AREA = 12.57;
-    private static final double INVALID_AREA = 9.42;
+    private static final double VALID_AREA = 13.31;
+    private static final double INVALID_AREA = 10.73;
 
     private static final List<Point> points = new ArrayList<>();
     private static final Cone cone = new Cone(points);

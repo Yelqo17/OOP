@@ -3,11 +3,16 @@ package com.github.yelqo17.shapes;
 import java.util.List;
 
 public class Square extends Figure {
+
     private static final int MAX_SIZE = 4;
+
     private static final int DEGREE_BY_FORMULA = 2;
+
     private static final int CONST_BY_FORMULA = 4;
+
     private static final int A = 0;
     private static final int B = 1;
+
     public Square(List<Point> points) {
         super(points);
     }

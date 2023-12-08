@@ -4,13 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Parallelogram extends Figure {
+
     private static final int MAX_SIZE = 4;
+
     private static final int DEGREE_BY_FORMULA = 2;
+
     private static final int A = 0;
     private static final int B = 1;
     private static final int C = 2;
     private static final int D = 3;
+
     private final List<Point> vectors = new ArrayList<>();
+
     public Parallelogram(List<Point> points) {
         super(points);
         createVector(points.get(A), points.get(B));
