@@ -19,13 +19,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    static final int MIN_LENGTH = 2;
+    private static final int MIN_LENGTH = 2;
 
-    static final int MAX_LENGTH = 3;
+    private static final int MAX_LENGTH = 3;
 
-    static final int X_INDEX = 0;
-    static final int Y_INDEX = 1;
-    static final int Z_INDEX = 2;
+    private static final int X_INDEX = 0;
+    private static final int Y_INDEX = 1;
+    private static final int Z_INDEX = 2;
 
     private enum FigureType {
         FIGURE,
