@@ -1,0 +1,161 @@
+@startuml
+
+class Circle {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - A: int
+  - B: int
+  + validate(): boolean
+  + calculateArea(): double
+  + calculatePerimeter(): double
+}
+class Cone {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - A: int
+  - B: int
+  - C: int
+  + validate(): boolean
+  + calculateArea(): double
+}
+class Cylinder {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - A: int
+  - B: int
+  - C: int
+  + validate(): boolean
+  + calculateArea(): double
+}
+class Figure {
+  - precision: double
+  # points: List
+  + validate(): boolean
+  + printArea(): void
+  + printPerimeter(): void
+  # calculateArea(): double
+  # calculatePerimeter(): double
+  # round(number): double
+  # printValid(): void
+  # printInvalid(): void
+  # calculateDistance(): double
+}
+class Main {
+  - MIN_LENGTH: int
+  - MAX_LENGTH: int
+  - X_INDEX: int
+  - Y_INDEX: int
+  - Z_INDEX: int
+  - FigureType: enum
+  + main(String[]): void
+  - commandIsValid(): boolean
+  - createFigure(command, points): Figure
+}
+class Parallelogram {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - A: int
+  - B: int
+  - C: int
+  - D: int
+  + validate(): boolean
+  + calculateArea(): double
+  + calculatePerimeter(): double
+  - createVector(p1, p2): void
+  - calculateScalarProduct(p1, p2): double
+  - areOppositeSidesParallel(): boolean
+  - calculateCos(p1, p2, product): double
+  - calculateSin(cos): double
+}
+class Point {
+  - x: int
+  - y: int
+  - z: int
+  + getX(): int
+  + getY(): int
+  + getZ(): int
+}
+class Polygon {
+  - MAX_SIZE: int
+  - DIVIDE: double
+  + validate(): boolean
+  + calculateArea(): double
+  + calculatePerimeter(): double
+  - arePointsCollinear(): boolean
+}
+class Rectangle {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - A: int
+  - B: int
+  - C: int
+  + validate(): boolean
+  + calculateArea(): double
+  + calculatePerimeter(): double
+  - areAllAngles90Degrees(): boolean
+}
+class Sphere {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - CONST_BY_FORMULA: int
+  - A: int
+  - B: int
+  + validate(): boolean
+  + calculateArea(): double
+}
+class Square {
+  - MAX_SIZE: int
+  - DEGREE_BY_FORMULA: int
+  - CONST_BY_FORMULA: int
+  - A: int
+  - B: int
+  + validate(): boolean
+  + calculateArea(): double
+  + calculatePerimeter(): double
+  - areAllAngles90Degrees(): boolean
+}
+class Triangle {
+  - MAX_SIZE: int
+  - DIVIDER: double
+  - A: int
+  - B: int
+  - C: int
+  + validate(): boolean
+  + calculateArea(): double
+  + calculatePerimeter(): double
+}
+class TruncatedSphere {
+  - MAX_SIZE: int
+  - A: int
+  - B: int
+  - C: int
+  + validate(): boolean
+  + calculateArea(): double
+}
+
+Circle --|> Figure
+Cone --|> Figure
+Cylinder --|> Figure
+Parallelogram --|> Figure
+Polygon --|> Figure
+Rectangle --|> Figure
+Sphere --|> Figure
+Square --|> Figure
+Triangle --|> Figure
+TruncatedSphere --|> Figure
+
+Main ..> Circle
+Main ..> Cone
+Main ..> Cylinder
+Main ..> Figure
+Main ..> Parallelogram
+Main ..> Point
+Main ..> Polygon
+Main ..> Rectangle
+Main ..> Sphere
+Main ..> Square
+Main ..> Triangle
+Main ..> TruncatedSphere
+
+Point --* Figure
+@enduml
